@@ -1,6 +1,11 @@
 package com.example.android.semi_autochess.model
 
 data class Square(val file: Int, val rank: Int) {
+    val ownedBy: Player?
+    init {
+        ownedBy = null
+    }
+
     fun behindMe() : Square {
         return Square(file,rank - 1)
     }
